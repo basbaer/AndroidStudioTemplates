@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         //if the view has a fixed size, add this for better performance
         //myRecyclerView.setHasFixedSize(true);
 
-        //setting up the LinearLayoutManager
+        //setting up the LinearLayoutManager -> there are more possibe, but the 
+		//LinearLayoutManager comes closest to the ListView
         myLayoutManager = new LinearLayoutManager(this);
         myRecyclerView.setLayoutManager(myLayoutManager);
 

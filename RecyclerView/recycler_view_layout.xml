@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+	//always set for layout_width and layout_height the value "wrap_content" (otherwise later one entry will be as big as the whole screen)
+	//give the TextView an id
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
