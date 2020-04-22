@@ -42,6 +42,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
 		
         holder.textView.setText(arrayList.get(position));
+		
+	//you can also add a onClickListener
+	    holder.itemView.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+                Intent intentToUsersFeedActivity = new Intent(getApplicationContext(), UsersFeedActivity.class);
+
+                v.getContext().startActivity(intentToUsersFeedActivity);
+
+			}
+        });
 
     }
 
