@@ -1,4 +1,4 @@
-1. Create a Constraint Layout in den Activities xml-file
+1. Create a Recycler-View in den Activities xml-file
 Important
 Set layout_width and layout_height not do defined values
 	->  build constraints and set: 
