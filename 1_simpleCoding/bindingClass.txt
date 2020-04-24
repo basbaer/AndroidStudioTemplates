@@ -1,0 +1,24 @@
+1. go to build.gradle(Module: app)
+	> android{
+		compileSdkVersion <version>
+		buildToolsVersion <version>
+
+	--> add:
+	--------------------------------------
+		viewBinding{
+			enabled = true
+		}
+	--------------------------------------
+	}
+
+2. Now the Binding classes are generated automically
+	-> The names of the classes are the name of the xml-file to camel case and 'Binding' at the end
+	-> example:
+		main_activity.xml > MainActivityBinding
+
+	-> access to the root layout of the xml-file: <binding class>.getRoot()
+
+3. Go to MainActivity
+	-> create the binding variabele: '<binding class 1>'
+
+	-> initialize variables: '<binding class 2>'

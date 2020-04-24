@@ -12,6 +12,24 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+	
+	//hier werden die Element, die jeder einzelne Eintrag besitzt gehandelt
+	//diser hier enthält nur eine TextView
+	public static class MyViewHolder extends RecyclerView.ViewHolder{
+		
+        public TextView textView;
+		
+        public MyViewHolder(View incomingTextView){
+            super(incomingTextView);
+            //Option 1
+            //textView = (TextView) incomingTextView;
+
+            //Option 2
+            textView = incomingTextView.findViewById(R.id.textViewForRecyclerView);
+        }
+    }
+	
+	
 
     private  ArrayList<String> arrayList;
 
@@ -64,16 +82,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return arrayList.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
-        public TextView textView;
-        public MyViewHolder(View incomingTextView){
-            super(incomingTextView);
-            //Option 1
-            //textView = (TextView) incomingTextView;
 
-            //Option 2
-            textView = incomingTextView.findViewById(R.id.textViewForRecyclerView);
-        }
-    }
 
 }
