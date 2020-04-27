@@ -13,12 +13,13 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 	
-	//hier werden die Element, die jeder einzelne Eintrag besitzt gehandelt
-	//diser hier enthält nur eine TextView
+	//here are the items/views handled, which every entry of the RecyclerView contains
+	//this example only contains a TextView
 	public static class MyViewHolder extends RecyclerView.ViewHolder{
 		
         public TextView textView;
 		
+		//in this constructor, the views are referenced
         public MyViewHolder(View incomingTextView){
             super(incomingTextView);
             //Option 1
