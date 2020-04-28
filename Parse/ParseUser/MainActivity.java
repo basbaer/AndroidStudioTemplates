@@ -11,16 +11,30 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		
-		//<binding class><
 		activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = activityMainBinding.getRoot();
         setContentView(view);
-		// </binding class>
 		
-		//hide the actionBar
-		getSupportActionBar().hide();
 		
+		//<Log in a User anonymous>
+		
+		
+		//LogIn a User without Username and password
+		            
+        ParseAnonymousUtils.logIn(new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+
+				if(e == null){
+					Log.i("Anonymous LogIn", "Successful");
+				}else{
+					Log.i("Anonymous LogIn", "Failed");
+				}
+
+             }
+        });
+		
+		//</Log in a User anonymous>
 
     }
 }
