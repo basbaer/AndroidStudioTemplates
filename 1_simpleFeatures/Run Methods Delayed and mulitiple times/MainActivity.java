@@ -6,7 +6,7 @@ public class MainActivity extends AppCompatActivity {
 
   private ActivityMainBinding activityMainBinding;
 
-  Handler handler = new Handler();
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -15,15 +15,20 @@ public class MainActivity extends AppCompatActivity {
     View view = activityMainBinding.getRoot();
     setContentView(view);
 
-    //handler let's something happen with a delay (e.g. 2000 ms)
-    //Runnable is a method, that runs every second, minute or whatever (int is time in ms)
+
+    //handler let's something happen with a delay (in ms) (e.g. 2000 ms)
+    //in the Runnable you can override the run() method and let i run in time intervals
+    //terminated by the handler
+    Handler handler = new Handler();
+
+
     handler.postDelayed(new Runnable() {
       @Override
       public void run() {
 
         //Code that should be run from time to time
 
-        //call the handler in the run method so it's recrusive and does not only call it once
+        //call the handler again, so this run method is called recrusive
         handler.postDelayed(this, <delay of call in ms>);
 
       }

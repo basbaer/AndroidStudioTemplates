@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(view);
 
     //get the current User
-    ParseUser.getCurrenUser();
+    ParseUser.getCurrentUser();
 
 
 
@@ -138,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
 
     //get only fields entries where special coloum has no entry
     myParseQuery.whereDoesNotExist("<coloum>") ;
+
+    //get results around a Geopoint
+    myParseQuery.whereNear(">coloum>", <GeoPoint>);
 
 
     //Update a value

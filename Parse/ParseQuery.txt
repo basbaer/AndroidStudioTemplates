@@ -1,3 +1,0 @@
-1. Main Activity
-<ParseQuery>
-

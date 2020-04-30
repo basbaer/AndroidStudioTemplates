@@ -1,0 +1,14 @@
+- ParseQueries:
+	<ParseQuery>
+
+- create ParseObject:
+	<create ParseObject>
+	
+	Addtional information:
+	Saving Options
+		.saveInBackground()
+		-> Standard Saving Option
+
+		.saveEventually()
+		-> doesn't neccessarilly saves it immediately, but when the user comes online the next time
+
