@@ -1,6 +1,6 @@
 package com.example.<your package>;
 
- 
+
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -34,15 +34,17 @@ public class RiderActivity extends FragmentActivity implements OnMapReadyCallbac
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        //checks if the permission is already granted
-        if(grantResults.length > 0 && grantResults[0]== PackageManager.PERMISSION_GRANTED){
+		if(requestCode == 0){
+			//checks if the permission is already granted
+			if(grantResults.length > 0 && grantResults[0]== PackageManager.PERMISSION_GRANTED){
 
-            if(ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,10,10, locationListener);
+				if(ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+					locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,10,10, locationListener);
 
 
-            }
-        }
+				}
+			}
+		}
     }
 
     @Override
@@ -114,6 +116,7 @@ public class RiderActivity extends FragmentActivity implements OnMapReadyCallbac
         //requestCode is kind of a tag
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
+            //this does'nt work inside methodes so if this is the case, build an external method
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         } else {
             //listen to change in location

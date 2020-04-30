@@ -1,3 +1,8 @@
+0. Implement the RecyclerView in the build.gradle (Module: app):
+	----------------------------------------
+	implementation 'androidx.recyclerview:recyclerview:1.1.0'
+	---------------------------------------
+
 1. Create a Recycler-View in den Activities xml-file
 Important
 Set layout_width and layout_height not do defined values
