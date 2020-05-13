@@ -1,0 +1,2 @@
+controll how fast textures change:
+look up Gdx Animations and Texture addless(?)

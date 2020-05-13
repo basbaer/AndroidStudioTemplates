@@ -1,0 +1,4 @@
+1. go to android > manifest
+
+2. change: android:screenOrientation="landscape"
+	-> "portrait" 
