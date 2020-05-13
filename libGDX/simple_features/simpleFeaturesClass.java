@@ -22,6 +22,15 @@ public class MyFlappyBird extends ApplicationAdapter {
 	@Override
 	public void render () {
 
+		//doing something, when the screen is touched
+		//is true, when the screen is touched
+		if(Gdx.input.justTouched()){
+
+			Gdx.app.log("Touched", "Yep");
+
+
+		}
+
 		//telling the render method, that we start to display sprites
 		batch.begin();
 
@@ -31,6 +40,12 @@ public class MyFlappyBird extends ApplicationAdapter {
 
 		//tell the method, that we are done with the sprites
 		batch.end();
+
+
+
+
+
+
 
 	}
 
