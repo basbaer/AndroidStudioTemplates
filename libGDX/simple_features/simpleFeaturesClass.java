@@ -41,7 +41,15 @@ public class MyFlappyBird extends ApplicationAdapter {
 		//tell the method, that we are done with the sprites
 		batch.end();
 
+		//<display a font>
+		BitmapFont font = new BitmapFont();
+		font.setColor(Color.BLUE);
+		font.getData().setScale(10);
 
+		//normally you only do this in the render method and the rest in the create method
+		font.draw(batch, String.valueOf(score), 80, 150);
+
+		//</display a font>
 
 
 
