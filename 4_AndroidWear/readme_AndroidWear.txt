@@ -1,0 +1,1 @@
+1. When creating a new Project, do NOT selcte "Phone and Tablet", but "Wear"
