@@ -1,0 +1,5 @@
+1. Rename app
+	https://stackoverflow.com/questions/18276872/change-project-name-on-android-studio
+	
+2. Rename package
+	https://stackoverflow.com/questions/16804093/rename-package-in-android-studio

@@ -1,0 +1,8 @@
+1. go to manifest
+	-> look for
+	 <application
+		....
+        	android:icon="@mipmap/ic_launcher"
+	....
+
+2. replace the icon

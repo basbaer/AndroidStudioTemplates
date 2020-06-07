@@ -1,0 +1,16 @@
+1. Navigiere im Reiter auf der linken Seite (dort wo alle Datein gespeichert sind) zu:
+	app > java > [my package name (also sowas wie "com.example.[appName]"])
+
+2. Rechtsklick auf das Package
+
+3. New > Java Class
+
+4. Es öffnet sich ein Fenster:
+	geb folgende Daten ein:
+		Name: DownloadTask
+	-> alle anderen Standardeinstellung behälst du
+
+5. Klicke auf 'Ok'
+
+6. Es sollte sich ein Fenster mit der neuen Class öffnen
+	-> es handelt sich dabei jetzt um eine Klasse und nicht um eine Activity
