@@ -25,9 +25,10 @@ Setting up a new Parse Server for a new app
 		○ Click 'OK' and 'Save private key' -> Important: All keyPairs are saved in: C:\keyPairs
 		-> Click 'yes' for saving it without passphrase (A passphrase on a private key is an extra layer of protection. Even if your private key is discovered, it can't be used without the passphrase. The downside to using a passphrase is that it makes automation harder because human intervention is needed to log on to an instance, or to copy files to an instance)
 		○ choose the file name
-	-> with this file it is now possible to use PuTTY as SSH client
+		-> with this file it is now possible to use PuTTY as SSH client
 
 3. Connecting to the Server (with PuTTY)
+		○ open PuTTY
 		○ Category pane: Session
 			- go to AWS and click connect on the instance dashboard
 				> copy the public DNS
@@ -138,6 +139,11 @@ Setting up a new Parse Server for a new app
 		iii. Log in with the username and password from the PuTTY panel
 	
 		In your Dashboard under 'Browser' on the left side, should be the Object
+
+11. Possilbe Errors:
+	- Emulator: emulator: WARNING: AsyncSocketServer.cpp:99: Error when accepting host connectionError message: Unknown error
+
+		Solution: use an other Emulator
 
 
 
