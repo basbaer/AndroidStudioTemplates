@@ -15,6 +15,14 @@ public class MainActivity extends AppCompatActivity {
     View view = activityMainBinding.getRoot();
     setContentView(view);
 
+    //Intent switchs the Activity
+    Intent intent = new Intent(getApplicationContext(), <Activity you want to switch to>.class);
+
+    //Optional: give some information with the Intent
+    intent.putExtra("username","Karl Kani");
+
+    startActivity(intent);
+
 
 
   }

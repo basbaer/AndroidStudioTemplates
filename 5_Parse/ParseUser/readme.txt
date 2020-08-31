@@ -17,3 +17,6 @@ content:
 
 - Log out a User:
 	<Log out a user>
+
+- get a list of all Users:
+	<get a list of all users>

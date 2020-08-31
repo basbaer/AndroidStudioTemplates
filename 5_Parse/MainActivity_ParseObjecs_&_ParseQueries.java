@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Option 1: get all Objects of the class
+    //note: the user-class is special; its class name is "_user"
     ParseQuery<ParseObject> myParseQuery = ParseQuery.getQuery("<name of class>");
 
     myParseQuery.findInBackground(new FindCallback<ParseObject>(){
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Option 2: Find a ParseObject by its id
+    //note: the user-class is special; its class name is "_user"
     ParseQuery<ParseObject> myParseQuery = ParseQuery.getQuery("<name of class>");
 
     myParseQuery.getInBackground("<objectId>", new GetCallback<ParseObject>(){
@@ -96,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Option 3: get objects with specific values
+    //note: the user-class is special; its class name is "_user"
     ParseQuery<ParseObject> myParseQuery = ParseQuery.getQuery("<name of class>");
 
     myParseQuery.<method>
