@@ -1,6 +1,6 @@
 1. Create a new folder for the menu (if it doesn't exist already)
 	Rechtsklick auf res (im Verzeichnis auf der linken Seite):
-	-> Android Resource Directory
+	-> New > Android Resource Directory
 		- name: menu
 		- Resource Type: Menu
 
