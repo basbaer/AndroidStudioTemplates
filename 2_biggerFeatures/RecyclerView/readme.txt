@@ -1,10 +1,11 @@
-0. Implement the RecyclerView in the build.gradle (Module: app):
+0. Implement the RecyclerView (and - if you want your own custom layout - the CardView) in the build.gradle (Module: app) dependencies:
 	----------------------------------------
 	implementation 'androidx.recyclerview:recyclerview:1.1.0'
+	(implementation 'androidx.cardview:cardview:1.0.0')
 	---------------------------------------
 
-1. Create a Recycler-View in den Activities xml-file
-Important
+1. Create a Recycler-View in den Activity's xml-file
+Important:
 Set layout_width and layout_height not do defined values
 	->  build constraints and set: 
 
@@ -29,7 +30,9 @@ Set layout_width and layout_height not do defined values
 	while setting up the methods:
 	-> you can choose between given layouts or setting up your own (therefore you have to create an other .xml-file)
 
-5. Optional
+5. Optional (for custom Layout):
+	-> recycler_view_layout.xml
+
 	When creating a xml-file for the layout:
 	- always set for layout_width and layout_height the value "wrap_content" (otherwise later one entry will be as big as the whole screen)
 	- give the TextView an id

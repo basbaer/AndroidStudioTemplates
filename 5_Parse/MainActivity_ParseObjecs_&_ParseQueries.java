@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //get a User
-    ParseQuery<ParseUser> myParseUserQuery = ParseQuery.getQuery("<name of class>");
+    ParseQuery<ParseUser> myParseUserQuery = ParseQuery.getQuery("_User");
 
     myParseUserQuery.getInBackground("<objectId>", new GetCallback<ParseObject>(){
       @Override
@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Update a value
+    //Note: it is not possible for a user to update an other users values
     ParseQuery<ParseObject> queryForObjectIWantToUpdate = ParseQuery.getQuery("<name of class>");
 
     queryForObjectIWantToUpdate.getInBackground("<objectId>", new GetCallback<ParseObject>(){
