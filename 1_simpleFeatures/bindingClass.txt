@@ -20,4 +20,4 @@
 
 2. Go to MainActivity
 	-> create the binding variable: 
-		'<binding class>'
+		go to MainActivity.java -> '<binding class>'

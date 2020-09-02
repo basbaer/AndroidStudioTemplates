@@ -135,6 +135,24 @@ public class MainActivity extends AppCompatActivity {
     //</get a list of all users>
 
 
+    //<Users-Query>
+    ParseQuery<ParseUser> UserQuery = ParseUser.getQuery();
+    UserQuery.whereEqualTo("<name of column>", "<value>");
+    UserQuery.findInBackground(new FindCallback<ParseUser>() {
+      public void done(List<ParseUser> objects, ParseException e) {
+        if (e == null) {
+          // The query was successful.
+        } else {
+          // Something went wrong.
+        }
+      }
+    });
+
+    //</Users-Query>
+
+
+
+
 
   }
 }

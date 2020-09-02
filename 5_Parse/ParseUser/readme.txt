@@ -20,3 +20,5 @@ content:
 
 - get a list of all Users:
 	<get a list of all users>
+
+- User-Query

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Option 1: get all Objects of the class
-    //note: the user-class is special; its class name is "_user"
+    //note: the user-class is special; its class name is "_User"
     ParseQuery<ParseObject> myParseQuery = ParseQuery.getQuery("<name of class>");
 
     myParseQuery.findInBackground(new FindCallback<ParseObject>(){
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Option 2: Find a ParseObject by its id
-    //note: the user-class is special; its class name is "_user"
+    //note: the user-class is special; its class name is "_User"
     ParseQuery<ParseObject> myParseQuery = ParseQuery.getQuery("<name of class>");
 
     myParseQuery.getInBackground("<objectId>", new GetCallback<ParseObject>(){
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Option 3: get objects with specific values
-    //note: the user-class is special; its class name is "_user"
+    //note: the user-class is special; its class name is "_User"
     ParseQuery<ParseObject> myParseQuery = ParseQuery.getQuery("<name of class>");
 
     myParseQuery.<method>
@@ -169,7 +169,37 @@ public class MainActivity extends AppCompatActivity {
     //</ParseQuery>
 
 
+    //<add data to a column of the type Array>
 
+    //here for the current user
+    ParseUser.getCurrentUser().getList("<name of column").add(<data to add>);
+
+
+    //</add data to a column of the type Array>
+
+
+    //<remove data from a column of the type Array>
+
+    //here for the current user
+    ParseUser.getCurrentUser().getList("<name of column").remove(<data to remove>);
+
+
+    //</add data to a column of the type Array>
+
+
+
+    //<check if a ceratin list contains a certain value>
+
+    //here for the current user
+    ParseUser.getCurrentUser().getList("<name of column").contains(<value>);
+
+    //for Objects or useres who are not the currentUser
+    ParseQuery<ParseObject> query = ParseQuery.getQuery("<name of class>");
+    query.whereContainedIn("<name of column>", "<value>")
+
+
+
+    //</check if a ceratin list contains a certain value>
 
 
 
