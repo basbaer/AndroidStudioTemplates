@@ -18,7 +18,7 @@ Setting up a new Parse Server for a new app
 	(https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html)
 	
 		○ open on your Computer: All programms > PuTTY > PuttYgen
-		-> in ordert oconvert the key from a .pem file to a .ppk file
+		-> in order to convert the key from a .pem file to a .ppk file
 		○ Type of key generate: choose RSA
 		○ click: Load
 		○ select the .pem file (change in options to 'All Files(*.*)
@@ -67,6 +67,10 @@ Setting up a new Parse Server for a new app
 	vi config.json
 
 5. Open Android-Studio
+
+Option 1: open the template (already has implemented a log in Activity)
+
+Option 2: Start a new project from skretch
 	a. Start new project
 		i. go to build.grade (Module: app) and copy in the dependencies:
 		---------------------------------------------------------
