@@ -68,15 +68,16 @@ public class MainActivity extends AppCompatActivity {
 
     int myColumnIndex = c.getColumnIndex("<name of column>");
 
-    c.moveToFirst();
+    boolean moreEntries = c.moveToFirst();
 
-    while(c != null){
+    while(moreEntries){
 
       //via the column index you can choose of which column you want the value
 
       Log.i("value of the column xy", c.getString(myColumnIndex));
 
-      c.moveToNext();
+      //moveToNext returns false if it is passed the last item
+      moreEntries = c.moveToNext();
 
     }
 
