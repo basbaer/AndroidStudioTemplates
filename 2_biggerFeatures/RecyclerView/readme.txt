@@ -36,3 +36,7 @@ Set layout_width and layout_height not do defined values
 	When creating a xml-file for the layout:
 	- always set for layout_width and layout_height the value "wrap_content" (otherwise later one entry will be as big as the whole screen)
 	- give the TextView an id
+
+Annotations:
+- it's not possible to create a RecyclerView in a 'delayed method' (e.g. in a method of a adapter)
+	-> Error: no adapter attached; skipping layout

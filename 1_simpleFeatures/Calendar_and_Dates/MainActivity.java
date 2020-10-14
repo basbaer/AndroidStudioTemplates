@@ -75,3 +75,42 @@ public class MainActivity extends AppCompatActivity {
 
 
   }
+
+
+  
+
+  private Calendar rollBackCorrect(Calendar calendar, int daysToRollBack){
+
+    if(daysToRollBack < calendar.get(Calendar.DATE)){
+
+        calendar.roll(Calendar.DATE, -daysToRollBack);
+
+    }
+
+    //checks if the month has to be changed
+    while(daysToRollBack > (calendar.get(Calendar.DATE))){
+        //subtracts as much days as the month has
+        daysToRollBack = daysToRollBack - calendar.get(Calendar.DATE) + 1;
+
+        //if there are still days left, the month is rolled back by one
+        if(daysToRollBack > 0) {
+
+            //rolls back the month by one
+            calendar.roll(Calendar.MONTH, -1);
+
+            //sets the date to the last date of the month
+            calendar.set(Calendar.DATE, calendar.getActualMaximum(Calendar.DATE));
+
+            //if the new month is December, it means, that it is gone passed the silvester and the Year is also rolled back by 1
+            if (calendar.get(Calendar.MONTH) == Calendar.DECEMBER) {
+
+                calendar.roll(Calendar.YEAR, -1);
+
+            }
+        }
+
+    }
+
+    return calendar;
+
+}

@@ -11,6 +11,16 @@ Widgets:
 
 
 Attributes:
+- android:layout_width="0dp"
+
+	What it does:
+	Matches the width to the parent, so it doesn't go off the screen
+
+
+- android:elevation="2dp"
+
+	What it does:
+	brings the view in the foreground above the other views
 
 - app:layout_constraintWidth_default=""   /  app:layout_constraintHeight_default=""
    
