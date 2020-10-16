@@ -32,8 +32,15 @@ public class MainActivity extends AppCompatActivity {
     String printString = mCalendar.getDisplayName(<field>, Calendar.LONG, Locale.getDefault())
 
 
-    //displaying a date, use the DateFormat oder SimpleDateFormat
+    //displaying a date, use the DateFormat or SimpleDateFormat
     String printDate = DateFormat.getDateInstance().format(<date>);
+
+    //patterns can be looked up online (here, only the time is shown)
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("h:mm a");
+
+     Date c = activitiesAL.get(position).getCalendarDate().getTime();
+
+     String printTime = simpleDateFormat.format(c);
 
 
 
@@ -77,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
 
-  
+
 
   private Calendar rollBackCorrect(Calendar calendar, int daysToRollBack){
 
