@@ -52,11 +52,24 @@ public class MainActivity extends AppCompatActivity {
 
 
     //<insert data in the db>
+    //Option 1:
 
     myDatabase.execSQL("INSERT INTO <name of table> (<first coloumn>, <second coloumn>) VALUES (<value of first coloumn>, <value of second coloumn>)");
 
     //example
     //myDatabase.execSQL("INSERT INTO users (username, age) VALUES ('discobreak21', 22)");
+
+
+
+    //Option 2:
+    ContentValues values = new ContentValues();
+
+    values.put("<name of coloum>", <values>);
+    //...
+
+    //this method returns the id and inserts the data
+    long id = database.insert("<name of table>", null, values);
+
 
     //</insert data in the db>
 
