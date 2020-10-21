@@ -23,3 +23,6 @@
 	</menu>
 
 4. MainActivity
+
+Note: you can add multiple menu Buttons to the toolbar
+	> menu_layout.xml

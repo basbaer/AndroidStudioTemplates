@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //creating the AlertDialog
-    AlertDialog.Builder builder = new AlertDialog.Builder(GroupListActivity.this);
+    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
     LayoutInflater layoutInflater = getLayoutInflater();
 

@@ -2,4 +2,9 @@
 
 - New > Vector Asset
 
-- Click on the icon next to "Clip Art" and select the icon
+	- Click on the icon next to "Clip Art" and select the icon
+
+	- or select your on file by importing it
+
+
+
