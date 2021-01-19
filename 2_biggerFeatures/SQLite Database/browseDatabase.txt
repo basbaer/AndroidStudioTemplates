@@ -1,0 +1,12 @@
+Open:
+View > Tool Windows > Device File Explorer
+
+Got to:
+data > data > PACKAGE_NAME > database
+
+Right-Click on database:
+Save as...
+
+
+Open/Download the DB Browser for SQLite:
+Open Database > choose your saved file (maybe you have to select "show all files")
