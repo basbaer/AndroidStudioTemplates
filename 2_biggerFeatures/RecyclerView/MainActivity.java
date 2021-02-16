@@ -21,19 +21,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
+    	View view = activityMainBinding.getRoot();
+        setContentView(view);
 
         //ArrayList which will be displayed
         ArrayList<String> arrayListToBeDisplayed = new ArrayList<>();
         arrayListToBeDisplayed.add("Karl Kani");
 
-        myRecyclerView = findViewById(R.id.recyclerView);
+        myRecyclerView = findViewById(activityMainBinding.recyclerview);
 
         //if the view has a fixed size, add this for better performance
         //myRecyclerView.setHasFixedSize(true);
 
         //setting up the LinearLayoutManager -> there are more possibe, but the 
-		//LinearLayoutManager comes closest to the ListView
+	//LinearLayoutManager comes closest to the ListView
         myLayoutManager = new LinearLayoutManager(this);
         myRecyclerView.setLayoutManager(myLayoutManager);
 

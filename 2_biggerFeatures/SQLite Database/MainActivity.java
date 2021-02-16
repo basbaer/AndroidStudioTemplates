@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //<Advanced Queries>
+    //Important: it does not work if you put in "?"s and then put variables in the String Array
 
     //get only certain attributes
     Cursor c = myDatabase.rawQuery("SELECT * FROM <name of table> WHERE <name of variable> <Bedingung>");
